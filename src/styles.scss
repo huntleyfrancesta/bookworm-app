@@ -1,5 +1,6 @@
 body {
-    background: linear-gradient(141deg, #9fb8ad 0%, #915c8e 51%, #e22ce8 75%);
+    background: #00ff00 url("https://images.iphotography.com/wp-content/uploads/2019/08/06103117/19-1.jpg")
+    no-repeat left top;
     font-family: Noto Sans, Helvetica, sans-serif;
     color: #666;
     letter-spacing: 1px;
@@ -12,7 +13,7 @@ body {
       min-height: 100vh;
       background-image: url("https://images.iphotography.com/wp-content/uploads/2019/08/06103117/19-1.jpg");
   }
-  
+
 
   header {
     text-align: center;
