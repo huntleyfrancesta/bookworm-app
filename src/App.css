@@ -1,8 +1,7 @@
 .App {
   text-align: center;
     min-height: 100vh;
-      background-image: url("https://hallmark.brightspotcdn.com/dims4/default/f0512ea/2147483647/strip/true/crop/2500x1667+0+0/resize/1920x1280!/quality/90/?url=http%3A%2F%2Fhallmark-channel-brightspot.s3.amazonaws.com%2Fb4%2F78%2F391aef8880dba823fd6aed0a362d%2Fhome-family-diy-picnic-basket.jpg");
-  
+    background-image: url("https://images.iphotography.com/wp-content/uploads/2019/08/06103117/19-1.jpg");
 }
 
 .App-logo {

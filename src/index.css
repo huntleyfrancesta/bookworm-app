@@ -11,10 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-background-image:url("https://images.iphotography.com/wp-content/uploads/2019/08/06103117/19-1.jpg")
--webkit-user-select: none;
-    margin: auto;
-    cursor: zoom-in;
-    background-color: hsl(0, 0%, 90%);
-    transition: background-color 300ms;
+.image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
