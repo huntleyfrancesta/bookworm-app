@@ -1,40 +1,265 @@
-.App {
-  text-align: center;
-    min-height: 100vh;
-   
+@import url('https://fonts.googleapis.com/css?family=Raleway|Sintony&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+footer,
+form,
+select,
+input::placeholder {
+	font-family: 'Sintony', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 18px;
+	font-weight: 300;
+	text-align: center;
+}
+body {
+	margin: 0;
+	background: linear-gradient(
+			to bottom,
+			rgba(255, 255, 255, 0.4),
+			rgba(255, 255, 255, 0)
+		),
+		/*url(img/wall.png) */;
+	background-attachment: scroll;
+}
+a {
+	text-decoration: underline;
+	color: inherit;
+	transition: color 0.25s linear;
+}
+footer {
+	padding: 20px;
+	margin-top: 20px;
+	text-shadow: 0 0 1px #555555;
+	background: linear-gradient(
+			to bottom,
+			rgba(255, 255, 255, 0.3),
+			rgba(255, 255, 255, 0.2)
+		),
+		url(img/dark_pattern.png);
+	box-shadow: 0 0 10px #656565;
+	border-top: 1px solid #656565;
+	-webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.error-message {
+	color: red;
+	text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(20px + 2vmin);
-  color: white;
+.hidden {
+	display: none;
 }
 
-.App-link {
-  color: #61dafb;
+/* Photo by Lysander Yuen on Unsplash
+lysander-yuen-wk833OrQLJE-unsplash.jpg
+Photo by Ria Puskas on Unsplash
+ria-puskas-OobxlWxuLaA-unsplash.jpg
+*/
+
+header {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+		url(img/ria-puskas-OobxlWxuLaA-unsplash.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 15% 0%;
+	background-attachment: scroll;
+	padding: 20px 0;
+	box-shadow: 0 0 10px black;
+}
+/* Vertically center header content */
+@media only screen and (min-height: 450px) {
+	header {
+		height: 100vh;
+	}
+	.header_content {
+		position: relative;
+		transform: translate(0px, -50%);
+		top: 40%;
+	}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+	margin-top: 40px;
+}
+section {
+	width: 100%;
+	margin-top: 20px;
+}
+
+img {
+	float: left;
+	padding-right: 10px;
+}
+
+form {
+	margin: 20px auto;
+	padding: 0 20px;
+}
+legend {
+	font-size: 48px;
+}
+.select-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media all and (min-width: 768px) /* Tablet & iPad Pro & above */ {
+	.select-container {
+		flex-direction: row;
+	}
+}
+
+/* iPad */
+@media only screen and (max-width: 768px) {
+	.select-container {
+		flex-direction: column;
+	}
+}
+
+select {
+	width: 200px;
+	margin-right: 10px;
+}
+
+input::placeholder {
+	color: white;
+}
+
+input {
+	color: white;
+	border: none;
+	border-bottom: 3px solid ghostwhite;
+	border-radius: 0px;
+	padding: 10px;
+	-webkit-font-smoothing: antialiased;
+	font-size: 28px;
+	background: none;
+	width: 300px;
+	margin: 20px 0;
+}
+
+input[type='text'] {
+	text-align: center;
+}
+
+/*
+input:focus {
+ outline: 3px solid ghostwhite;
+}
+*/
+
+button {
+	border: 3px solid ghostwhite;
+	margin: 0 auto;
+	padding: 8px 13px;
+	color: ghostwhite;
+	font-size: 28px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	background: rgba(255, 255, 255, 0.25);
+	transition: color 0.25s linear;
+	text-shadow: 0 0 3px #555555;
+	border-radius: 0;
+	width: 250px;
+}
+
+button:hover,
+button:active,
+button:focus {
+	color: #533d6d;
+	background-color: #fff;
+}
+
+@media all and (min-width: 768px) /* Tablet & iPad Pro & above */ {
+	input {
+		width: 400px;
+	}
+}
+
+/* iPad */
+@media only screen and (max-width: 768px) {
+	input {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	button {
+		margin-left: 3px;
+		margin-bottom: 20px;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+legend {
+	font-family: 'Raleway', sans-serif;
+}
+h1 {
+	font-size: 48px;
+}
+h2 {
+	font-size: 38px;
+}
+h3 {
+	font-size: 26px;
+	margin-top: 50px;
+}
+h3 {
+	font-size: 18px;
+}
+
+#results {
+	color: #000;
+}
+
+ul {
+	list-style: none;
+}
+
+.item {
+	border: 1px solid silver;
+	padding: 20px;
+	margin: 20px;
+}
+
+.item-header {
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+}
+
+.item-description-container {
+	display: flex;
+	margin-top: 10px;
+	text-align: left;
+}
+
+/* ************************************ dynamic back to top button ************************************ */
+.back-to-top {
+	position: fixed;
+	bottom: 0;
+	right: 10px;
+	text-decoration: none;
+	color: #000;
+	background: #ccc;
+	/* The Fallback for IE */
+	background-color: rgba(235, 235, 235, 0.8);
+	border-radius: 4px 4px 0 0;
+	font-size: 0.75em;
+	padding: 1em;
+	display: none;
+}
+.back-to-top:hover {
+	background: #fff;
 }
