@@ -2,7 +2,7 @@ import React from 'react';
 
 // using trackPromise so can use LoadingIndicator
 import { trackPromise } from 'react-promise-tracker';
-import LoadingIndicator from './LoadingIndicator/LoadingIndicator';
+import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 
 const printTypes = ['all', 'books', 'magazines'];
 const bookTypes = ['partial', 'full', 'free-ebooks', 'paid-ebooks', 'ebooks'];

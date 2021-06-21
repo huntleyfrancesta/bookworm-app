@@ -1,7 +1,7 @@
 import React from 'react';
-import { Search } from './Search';
-import { Results } from './Results';
-import { BackToTop } from './BackToTop';
+import { Search } from './components/Search';
+import { Results } from './components/Results';
+import { BackToTop } from './components/BackToTop';
 
 import './App.css';
 
