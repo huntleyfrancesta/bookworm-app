@@ -1,6 +1,10 @@
 body {
     background: #00ff00 url("https://images.iphotography.com/wp-content/uploads/2019/08/06103117/19-1.jpg")
-    no-repeat left top;
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family: Noto Sans, Helvetica, sans-serif;
     color: #666;
     letter-spacing: 1px;
