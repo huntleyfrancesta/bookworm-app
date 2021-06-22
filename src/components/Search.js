@@ -8,18 +8,10 @@ import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 const printTypes = ['all', 'books', 'magazines'];
 const bookTypes = ['partial', 'full', 'free-ebooks', 'paid-ebooks', 'ebooks'];
 
-const apiKey = 'AIzaSyA5ZmAxxTqCMODzl5bgsvKsZ5c0CBVF_go';
 
-const apiURL = 'https://www.googleapis.com/books/v1/volumes';
-
-
-const 'https://books.googleapis.com/books/v1/volumes?key=[YOUR_API_KEY] HTTP/1.1'
-
-Authorization: Bearer ['AIzaSyCIxIIcpTwWrV5HmCj_q4AWZRAqD7y6CFI']
-Accept: application/json
-
-
-
+const App = () => {
+const APP_ID = 'AIzaSyA5ZmAxxTqCMODzl5bgsvKsZ5c0CBVF_go';
+const APP_KEY = 'https://www.googleapis.com/books/v1/volumes';
 
 export class Search extends React.Component {
 	state = {
@@ -41,7 +33,7 @@ export class Search extends React.Component {
 	}
 
 	fetchBooks = () => {
-		const getURL = `${apiURL}?key=${apiKey}&langRestrict=en&maxResults=40&orderBy=relevance&q=${this.state.searchTerm}&filter=${this.state.bookType}&printType=${this.state.printType}`;
+		const getURL = `${'https://www.googleapis.com/books/v1/volumes'}?key=${'AIzaSyA5ZmAxxTqCMODzl5bgsvKsZ5c0CBVF_go'}&langRestrict=en&maxResults=40&orderBy=relevance&q=${this.state.searchTerm}&filter=${this.state.bookType}&printType=${this.state.printType}`;
 
 		// console.log(getURL);
 		// console.log(JSON.stringify(this.state.searchTerm, null, 2));
