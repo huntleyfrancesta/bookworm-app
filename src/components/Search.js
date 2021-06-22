@@ -126,6 +126,8 @@ export class Search extends React.Component {
 				<LoadingIndicator />
 			</div>
 		);
-	}
+	};
+
+}
 
 }
