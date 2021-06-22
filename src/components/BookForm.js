@@ -9,16 +9,17 @@ const BookForm = (props) => {
       author: props.book ? props.book.author : '',
       quantity: props.book ? props.book.quantity : '',
       price: props.book ? props.book.price : '',
-      date: props.book ? props.book.date : ''
+      date: props.book ? props.book.date : '',
+      search: props.book? props.book.date : ''
     };
   });
 
   const [errorMsg, setErrorMsg] = useState('');
-  const { bookname, author, price, quantity } = book;
+  const { bookname, author, price, quantity,search } = book;
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    const values = [bookname, author, price, quantity];
+    const values = [bookname, author, price, quantity, search];
     let errorMsg = '';
 
     const allFieldsFilled = values.every((field) => {
@@ -33,6 +34,7 @@ const BookForm = (props) => {
         author,
         price,
         quantity,
+        search,
         date: new Date()
       };
       props.handleOnSubmit(book);
@@ -104,6 +106,19 @@ const BookForm = (props) => {
             value={quantity}
             placeholder="Enter available quantity"
             onChange={handleInputChange}
+
+        />
+        </Form.Group>
+        <Form.Group controlId="search">
+          <Form.Label>search</Form.Label>
+          <Form.Control
+            className="input-control"
+            type="text"
+            name="search"
+            value={search}
+            placeholder="Search"
+            onChange={handleInputChange}      
+
           />
         </Form.Group>
         <Form.Group controlId="price">
