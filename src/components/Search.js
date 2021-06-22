@@ -39,7 +39,7 @@ export class Search extends React.Component {
 		// console.log(JSON.stringify(this.state.searchTerm, null, 2));
 
 		trackPromise(
-			fetch(getURL)
+			fetch('https://www.googleapis.com/books/v1/volumes')
 				.then(res => {
 					if (!res.ok) {
 						throw new Error('Something went wrong, please try again later.');
@@ -127,4 +127,5 @@ export class Search extends React.Component {
 			</div>
 		);
 	}
+
 }
