@@ -8,9 +8,12 @@ import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 const printTypes = ['all', 'books', 'magazines'];
 const bookTypes = ['partial', 'full', 'free-ebooks', 'paid-ebooks', 'ebooks'];
 
-//const apiKey = 'AIzaSyCIxIIcpTwWrV5HmCj_q4AWZRAqD7y6CFI';
+const apiKey = 'AIzaSyA5ZmAxxTqCMODzl5bgsvKsZ5c0CBVF_go';
 
-GET: 'https://books.googleapis.com/books/v1/volumes?key=[YOUR_API_KEY] HTTP/1.1'
+const apiURL = 'https://www.googleapis.com/books/v1/volumes';
+
+
+const 'https://books.googleapis.com/books/v1/volumes?key=[YOUR_API_KEY] HTTP/1.1'
 
 Authorization: Bearer ['AIzaSyCIxIIcpTwWrV5HmCj_q4AWZRAqD7y6CFI']
 Accept: application/json
