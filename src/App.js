@@ -80,13 +80,13 @@ class App extends React.Component {
 						/>
 					) : null}
 					<span>
-						Photo by Ria Puskas on Unsplash • Built by{' '}
+						{' '}
 						<a
-							href="http://www.asktami.com"
+							href="https://github.com/huntleyfrancesta/bookworm-app"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							Tami Williams
+						Francesta huntley
 						</a>
 					</span>
 				</footer>
