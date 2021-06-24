@@ -2,8 +2,8 @@ import React from 'react';
 import { Search } from './components/Search';
 import { Results } from './components/Results';
 import { BackToTop } from './components/BackToTop';
+import App from './App.css';
 
-import './App.css';
 
 class App extends React.Component {
 	constructor(props) {
