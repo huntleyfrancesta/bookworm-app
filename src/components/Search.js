@@ -1,17 +1,19 @@
 import React from 'react';
 
-
+import Results from "../components/Results";
+import API from "../utilis/API";
 // using trackPromise so can use LoadingIndicator
 import { trackPromise } from 'react-promise-tracker';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
+
+
 
 const printTypes = ['all', 'books', 'magazines'];
 const bookTypes = ['partial', 'full', 'free-ebooks', 'paid-ebooks', 'ebooks'];
 
 
-const App = () => {
-const APP_ID = 'AIzaSyA5ZmAxxTqCMODzl5bgsvKsZ5c0CBVF_go';
-const APP_KEY = 'https://www.googleapis.com/books/v1/volumes';
+const apikey = 'AIzaSyA5ZmAxxTqCMODzl5bgsvKsZ5c0CBVF_go';
+const ApiURL = 'https://www.googleapis.com/books/v1/volumes';
 
 export class Search extends React.Component {
 	state = {
@@ -33,13 +35,13 @@ export class Search extends React.Component {
 	}
 
 	fetchBooks = () => {
-		const getURL = `${'https://www.googleapis.com/books/v1/volumes'}?key=${'AIzaSyA5ZmAxxTqCMODzl5bgsvKsZ5c0CBVF_go'}&langRestrict=en&maxResults=40&orderBy=relevance&q=${this.state.searchTerm}&filter=${this.state.bookType}&printType=${this.state.printType}`;
+		const getURL = `${'apiURL'}?key=${'apiKey'}&langRestrict=en&maxResults=40&orderBy=relevance&q=${this.state.searchTerm}&filter=${this.state.bookType}&printType=${this.state.printType}`;
 
 		// console.log(getURL);
 		// console.log(JSON.stringify(this.state.searchTerm, null, 2));
 
 		trackPromise(
-			fetch('https://www.googleapis.com/books/v1/volumes')
+			fetch(getURL)
 				.then(res => {
 					if (!res.ok) {
 						throw new Error('Something went wrong, please try again later.');
@@ -74,7 +76,7 @@ export class Search extends React.Component {
 
 		return (
 			<div className="header_content">
-				<h1>Google Book Search</h1>
+				<h1>bookworm</h1>
 
 				<form id="form" onSubmit={e => this.handleSubmit(e)}>
 					<legend />
@@ -126,8 +128,5 @@ export class Search extends React.Component {
 				<LoadingIndicator />
 			</div>
 		);
-	};
-
-}
-
+	}
 }
