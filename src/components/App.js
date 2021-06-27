@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import App from './App.css';
-import book from '../components/bookComponents';
+import App from '../components/App.js'
 import 'async';
 
 
